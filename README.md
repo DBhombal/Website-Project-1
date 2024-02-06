@@ -9,4 +9,4 @@ I was unable to incorporate a real streaming service, so I had simply included o
 There is also a page to view show timing (NOT ACCURATE) for a few shows I had in mind at the time of making this.
 
 
-**IMPORTANT** Launch "Index.html" and navigate throughout the page  **/IMPORTANT**
+** Launch "Index.html" and navigate throughout the page  **
