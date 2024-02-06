@@ -1,0 +1,73 @@
+<!--
+    Comp 2680 - Final Project
+
+    Muhammad Danish Bhombal
+    T00662679
+
+    Releases page
+
+    Should display a weekly calendar with the releases at the scheduled times
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Release Schedule</title>
+    <meta charset="UTF-8">
+
+    <!-- Contains hamburger-menu icon for the responsive nav bar  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="ShowTimes.js" defer></script>
+    <script src="Releases.js" defer></script>
+    <script src="lastUpdate.js" defer></script>
+    <script src="ResponsivePage.js" defer></script>
+</head>
+
+<body>
+    <Header><a href="index.html"><img src="FlooshLogo.png" class="responsive"></a></Header>
+
+    <div class="topnav" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="releases.html" class="active">Releases</a>
+        <a href="shop.html">Shop</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div id="Schedule">
+
+    </div>
+
+    <div id="nextDay">
+        <h1 id="releases">Releasing Soon</h1>
+        <br>
+
+    </div>
+
+    <footer>
+        <nav id="bottom">
+            <ul type="none">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">TicTok</a></li>
+            </ul>
+
+            <ul type="none">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">ToS </a></li>
+                <li><a href="#">EULA</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p id='lastUpdate'></p>
+        <p>Floosh Streaming Service &copy; 2023 All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

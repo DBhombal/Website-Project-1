@@ -1,0 +1,102 @@
+<!-- 
+    Comp 2680 Final Project
+
+    Streaming service:
+        Name: Floosh
+
+    Implementations:
+        Weekly Calendar that is segmented into days, 
+        the contents of the calendar on that day will be displayed.
+
+        Shopping page that will have a few fake items for sale
+            It will also have a fake cart/checkout system
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Floosh</title>
+
+    <!-- Requirement 3.2.1 E is met here -->
+    <meta charset="UTF-8">
+
+    <!-- Contains hamburger-menu icon for the responsive nav bar  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="CountDown.js" defer></script>
+    <script src="lastUpdate.js" defer></script>
+    <script src="ResponsivePage.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Requirement 3.2.1 B.II met here-->
+    <!-- Requirement 3.2.1 C met here aswell -->
+    <Header><a href="index.html" id="banner"><img src="FlooshLogo.png" class="responsive"></a></Header>
+
+    <div class="topnav" id="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="releases.html">Releases</a>
+        <a href="shop.html">Shop</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <table>
+        <tr class=responsive>
+            <div class="Row1-2" id="Floosh">
+                <h1>What is floosh?</h1>
+                <p>Floosh is a new up and coming streaming-service expected to go live early 2023</p>
+                <p>We will have many different genres available to browse from; ranging from western theater to Japanese
+                    anime. </p>
+            </div>
+
+            <div class="Row1-2" id="Count">
+                <h1>COUNTDOWN UNTIL LIVE</h1>
+                <h3 id="CountDown"></h3>
+            </div>
+        </tr>
+    </table>
+
+    <div id="Diff">
+        <h1>What makes Floosh different from competitors?</h1>
+
+        <p>Floosh started out from a team of nerds that got tired of companies
+            overcharging for having a bad service. We understand the struggle of
+            having to swap the VPN to another country just to watch the next season of a show.
+        </p>
+
+        <p>
+            Floosh will be all inclusive under a single membership, no more juggling between service providers,
+            trying to find the one that has the show you're trying to watch.
+        </p>
+    </div>
+
+    <!-- Requirement 3.2.1 F is met here-->
+    <footer>
+        <nav id="bottom">
+            <ul type="none">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">TicTok</a></li>
+            </ul>
+
+            <ul type="none">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">ToS </a></li>
+                <li><a href="#">EULA</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- Requirement 3.2.1 G is met here (lastUpdate.js for the script code) -->
+        <p id='lastUpdate'></p>
+        <p>Floosh Streaming Service &copy; 2023 All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

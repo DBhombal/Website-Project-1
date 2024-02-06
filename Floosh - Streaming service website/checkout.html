@@ -1,0 +1,156 @@
+<!-- 
+    Comp 2680 Final Project
+
+    Streaming service:
+        Name: Floosh
+
+    Implementations:
+        Displays only the items that had a quantity selected
+
+        Will also have a checkout system with validation
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check Out</title>
+    <meta charset="UTF-8">
+
+    <!-- Contains hamburger-menu icon for the responsive nav bar  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="Shop.js" async></script>
+    <script src="Cart.js" async></script>
+    <script src="ValidateInfo.js" async></script>
+    <script src="lastUpdate.js" defer></script>
+    <script src="ResponsivePage.js" defer></script>
+</head>
+
+<body>
+    <Header><a href="index.html"><img src="FlooshLogo.png" class="responsive"></a></Header>
+    <div class="topnav" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="releases.html">Releases</a>
+        <a href="shop.html">Shop</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div id="divCart">
+        <!-- Footer for Shop-->
+        <tr id='footer'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id='sub'>SubTotal: </td>
+            <td id='subTotal'><img id='price' />0</td>
+        </tr>
+    </div>
+
+    <div id="divForms">
+        <!-- Requirement for 3.2.3 A met here -->
+        <form id="paymentinfo" name="paymentinfo" method="post" action="invoice.html">
+
+            <center>
+                <table id="paymentTable">
+                    <h2>Checkout</h2>
+
+                    <tr>
+                        <td>
+                            <p id="req">*Indicates a required field</p>
+                        </td>
+                        <td>
+                            <img id="card" src="Shop/amex.png"><img id="cardMid1" src="Shop/master.png"><img
+                                id="cardMid2" src="Shop/visa.png"><img id="card" src="Shop/discover.png">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- Requirement for 3.2.3 C met here -->
+                        <td id="cart"><label for="cardName">*Name of cardholder:</label></td>
+                        <td id="cart"><input name="cardName" id="cardName" required type="text" /></td>
+                    </tr>
+
+                    <tr>
+                        <td id="cart"><label for="cardNumber">*Card Number:</label></td>
+                        <td id="cart"><input name="cardNumber" id="cardNumber" required type="text"
+                                pattern=^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$ />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td id="cart"><label for="expMonth">*Expiry Date:</label></td>
+                        <td id="cart">
+                            <select id="expMonth" name="expMonth">
+                                <option value="MM" selected>MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+
+                            <select id="expYear" name="expYear">
+                                <option value="YY" selected>YY</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td id="cart"><label for="cvc">*CVC:</label></td>
+                        <td id="cart"><input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td id="cart"><label for="Email">*Email Address:</label></td>
+                        <td id="cart"><input name="Email" id="Email" required type="email"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><button id="checkoutbtn">Check Out</td>
+                    </tr>
+
+                </table>
+
+                <br>
+            </center>
+        </form>
+    </div>
+
+    <footer>
+        <nav id="bottom">
+            <ul type="none">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">TicTok</a></li>
+            </ul>
+
+            <ul type="none">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">ToS </a></li>
+                <li><a href="#">EULA</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p id='lastUpdate'></p>
+        <p>Floosh Streaming Service &copy; 2023 All Rights Reserved</p>
+    </footer>
+
+</html>

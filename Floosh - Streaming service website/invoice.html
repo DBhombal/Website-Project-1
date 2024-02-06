@@ -1,0 +1,82 @@
+<!-- 
+    Comp 2680 Final Project
+
+    Streaming service:
+        Name: Floosh
+
+    Implementations:
+        Displays a thank you message
+        Also has a video
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check Out</title>
+    <meta charset="UTF-8">
+
+    <!-- Contains hamburger-menu icon for the responsive nav bar  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="Shop.js" async></script>
+    <script src="Cart.js" async></script>
+    <script src="ValidateInfo.js" async></script>
+    <script src="lastUpdate.js" defer></script>
+    <script src="ResponsivePage.js" defer></script>
+</head>
+
+<body>
+    <!-- Requirement 3.2.5 A is met here (Youtube embedded video)-->
+    <Header><a href="index.html"><img src="FlooshLogo.png" class="responsive"></a></Header>
+    <div class="topnav" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="releases.html">Releases</a>
+        <a href="shop.html">Shop</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div>
+        <h1>Thank you for your purchase!</h1>
+        <h2>You have been emailed a copy of your receipt</h2>
+
+        <br>
+        <h3>Complimentary Gnoming</h3>
+        <center>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1FFBsX5C61Q"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <br>
+
+            <h6>You are also eternally subscribed to our newsletter, you may not unsubscribe</h6>
+        </center>
+    </div>
+
+
+    <footer>
+        <nav id="bottom">
+            <ul type="none">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">TicTok</a></li>
+            </ul>
+
+            <ul type="none">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">ToS </a></li>
+                <li><a href="#">EULA</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p id='lastUpdate'></p>
+        <p>Floosh Streaming Service &copy; 2023 All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
